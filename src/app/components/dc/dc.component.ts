@@ -20,7 +20,8 @@ export class DcComponent implements OnInit {
     this.getDCWeather();
   }
   getDCWeather() {
-    const observable = this.weatherService.getData(4350878);
+    // tslint:disable-next-line:prefer-const
+    let observable = this.weatherService.getData(4350878);
     observable.subscribe(data => {
       this.humidity = data.main.humidity;
       this.status = data.weather[0].description;

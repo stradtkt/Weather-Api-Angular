@@ -17,7 +17,8 @@ export class DallasComponent implements OnInit {
     this.getDallasWeather();
   }
   getDallasWeather() {
-    const observable = this.weatherService.getData(4684888);
+    // tslint:disable-next-line:prefer-const
+    let observable = this.weatherService.getData(4684888);
     observable.subscribe(data => {
       this.humidity = data.main.humidity;
       this.status = data.weather[0].description;

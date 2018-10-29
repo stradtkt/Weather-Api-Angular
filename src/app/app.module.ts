@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { WeatherService } from './services/weather.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,7 @@ import { BurbankComponent } from './components/burbank/burbank.component';
 import { SanjoseComponent } from './components/sanjose/sanjose.component';
 import { DcComponent } from './components/dc/dc.component';
 import { ChicagoComponent } from './components/chicago/chicago.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { ChicagoComponent } from './components/chicago/chicago.component';
     BurbankComponent,
     SanjoseComponent,
     DcComponent,
-    ChicagoComponent
+    ChicagoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]

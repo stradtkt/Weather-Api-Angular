@@ -18,7 +18,8 @@ export class BurbankComponent implements OnInit {
     this.getBurbankWeather();
   }
   getBurbankWeather() {
-    const observable = this.weatherService.getData(5331835);
+    // tslint:disable-next-line:prefer-const
+    let observable = this.weatherService.getData(5331835);
     observable.subscribe(data => {
       this.humidity = data.main.humidity;
       this.status = data.weather[0].description;

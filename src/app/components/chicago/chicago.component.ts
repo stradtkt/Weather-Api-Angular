@@ -18,7 +18,8 @@ export class ChicagoComponent implements OnInit {
     this.getChicagoWeather();
   }
   getChicagoWeather() {
-    const observable = this.weatherService.getData(4887398);
+    // tslint:disable-next-line:prefer-const
+    let observable = this.weatherService.getData(4887398);
     observable.subscribe(data => {
       this.humidity = data.main.humidity;
       this.status = data.weather[0].description;
